@@ -8,6 +8,11 @@ int main( int argc, char *argv[] )
 {
 	int ibc, hostid, mac, sn;
 
+	if ( argc != 2 ) {
+		printf("enter the 4-digit vaue found on your NVRAM barcode\n");
+		exit(1);
+	}
+
 	ibc = strtol( argv[1], ( char ** ) NULL, 36 );
 	sn = ibc - 0xAA8C0;
 	mac = ibc - 0x82DC0;
