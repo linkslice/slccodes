@@ -1,14 +1,17 @@
 /* Little proggy to work out the serial number, hostid and MAC address of a
  * SPARCstation SLC, given the 4-digit value on the NVRAM barcode
+ *
+ * to compile:
+ * gcc slccodes.c -o slccodes
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main( int argc, char *argv[] )
 {
 	int ibc, hostid, mac, sn;
-
-	if ( argc != 2 ) {
+	if ( argc != 2 || (strcmp(argv[1], "-h" ) == 0 )) {
 		printf("enter the 4-digit vaue found on your NVRAM barcode\n");
 		exit(1);
 	}
