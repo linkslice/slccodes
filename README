@@ -1,0 +1,7 @@
+Compile like so:
+gcc slccodes.c -o slccodes
+
+execute like so:
+./slccodes 1234
+
+
